@@ -7,10 +7,10 @@ import java.io.PrintStream;
 
 import org.junit.jupiter.api.Test;
 
-public class RamalesTest {
+class RamalesTest {
 
     @Test
-    public void ramalUnico() {
+    void ramalUnico() {
         String entrada = "1\n"
                 + "Ana I 100\n";
 
@@ -18,7 +18,7 @@ public class RamalesTest {
     }
 
     @Test
-    public void ramalDobleUnico() {
+    void ramalDobleUnico() {
         String entrada = "2\n"
                 + "Ana I 100\n"
                 + "Pedro I 300\n";
@@ -27,7 +27,7 @@ public class RamalesTest {
     }
 
     @Test
-    public void ramalDobleMixto() {
+    void ramalDobleMixto() {
         String entrada = "2\n"
                 + "Ana I 100\n"
                 + "Pedro D 300\n";
@@ -36,7 +36,7 @@ public class RamalesTest {
     }
 
     @Test
-    public void ramalMismaDistancia() {
+    void ramalMismaDistancia() {
         String entrada = "2\n"
                 + "Ana I 300\n"
                 + "Pedro D 300\n";
@@ -45,7 +45,7 @@ public class RamalesTest {
     }
 
     @Test
-    public void ramalNormal() {
+    void ramalNormal() {
         String entrada = "5\n"
                 + "Ana I 100\n"
                 + "Pedro D 300\n"
@@ -57,7 +57,7 @@ public class RamalesTest {
     }
 
     @Test
-    public void variosConjuntosDeRamales() {
+    void variosConjuntosDeRamales() {
         String entrada = "3\n"
                 + "EdwardPease D 250\n"
                 + "GeorgeStephenson I 500\n"

@@ -4,10 +4,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 
-public class ParseRamalTest {
+class ParseRamalTest {
 
     @Test
-    public void ramalUnico() {
+    void ramalUnico() {
         String ramal = "1\n"
                 + "Ana I 100\n";
 
@@ -20,7 +20,7 @@ public class ParseRamalTest {
     }
 
     @Test
-    public void ramalDobleUnico() {
+    void ramalDobleUnico() {
         String ramal = "2\n"
                 + "Ana I 100\n"
                 + "Pedro I 300\n";
@@ -33,7 +33,7 @@ public class ParseRamalTest {
     }
 
     @Test
-    public void ramalDobleMixto() {
+    void ramalDobleMixto() {
         String ramal = "2\n"
                 + "Ana I 100\n"
                 + "Pedro D 300\n";
@@ -47,7 +47,7 @@ public class ParseRamalTest {
     }
 
     @Test
-    public void ramalMismaDistancia() {
+    void ramalMismaDistancia() {
         String ramal = "2\n"
                 + "Ana I 300\n"
                 + "Pedro D 300\n";
@@ -59,7 +59,7 @@ public class ParseRamalTest {
     }
 
     @Test
-    public void ramalNormal() {
+    void ramalNormal() {
         String ramal = "5\n"
                 + "Ana I 100\n"
                 + "Pedro D 300\n"
