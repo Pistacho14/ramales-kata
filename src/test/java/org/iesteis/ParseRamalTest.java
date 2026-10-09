@@ -7,59 +7,59 @@ import org.junit.jupiter.api.Test;
 class ParseRamalTest {
 
     @Test
-    void ramalUnico() {
+    void uniqueRamal() {
         String ramal = "1\n"
                 + "Ana I 100\n";
 
-        List<Ramal> resultado = ParseRamal.parseRamal(ramal);
+        List<Ramal> result = ParseRamal.parseRamal(ramal);
 
-        assertEquals(1, resultado.size());
-        assertEquals("Ana", resultado.get(0).getName());
-        assertEquals("I", resultado.get(0).getDirection());
-        assertEquals(100, resultado.get(0).getDistance());
+        assertEquals(1, result.size());
+        assertEquals("Ana", result.get(0).getName());
+        assertEquals("I", result.get(0).getDirection());
+        assertEquals(100, result.get(0).getDistance());
     }
 
     @Test
-    void ramalDobleUnico() {
+    void doubleUniqueRamal() {
         String ramal = "2\n"
                 + "Ana I 100\n"
                 + "Pedro I 300\n";
 
-        List<Ramal> resultado = ParseRamal.parseRamal(ramal);
+        List<Ramal> result = ParseRamal.parseRamal(ramal);
 
-        assertEquals(2, resultado.size());
-        assertEquals("Ana", resultado.get(0).getName());
-        assertEquals("Pedro", resultado.get(1).getName());
+        assertEquals(2, result.size());
+        assertEquals("Ana", result.get(0).getName());
+        assertEquals("Pedro", result.get(1).getName());
     }
 
     @Test
-    void ramalDobleMixto() {
+    void mixedDoubleRamal() {
         String ramal = "2\n"
                 + "Ana I 100\n"
                 + "Pedro D 300\n";
 
-        List<Ramal> resultado = ParseRamal.parseRamal(ramal);
+        List<Ramal> result = ParseRamal.parseRamal(ramal);
 
-        assertEquals("Ana", resultado.get(0).getName());
-        assertEquals("I", resultado.get(0).getDirection());
-        assertEquals("Pedro", resultado.get(1).getName());
-        assertEquals("D", resultado.get(1).getDirection());
+        assertEquals("Ana", result.get(0).getName());
+        assertEquals("I", result.get(0).getDirection());
+        assertEquals("Pedro", result.get(1).getName());
+        assertEquals("D", result.get(1).getDirection());
     }
 
     @Test
-    void ramalMismaDistancia() {
+    void sameDistanceRamal() {
         String ramal = "2\n"
                 + "Ana I 300\n"
                 + "Pedro D 300\n";
 
-        List<Ramal> resultado = ParseRamal.parseRamal(ramal);
+        List<Ramal> result = ParseRamal.parseRamal(ramal);
 
-        assertEquals(300, resultado.get(0).getDistance());
-        assertEquals(300, resultado.get(1).getDistance());
+        assertEquals(300, result.get(0).getDistance());
+        assertEquals(300, result.get(1).getDistance());
     }
 
     @Test
-    void ramalNormal() {
+    void normalRamal() {
         String ramal = "5\n"
                 + "Ana I 100\n"
                 + "Pedro D 300\n"
