@@ -6,17 +6,17 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-public class SortRamalTest {
+class SortRamalTest {
 
     @Test
-    public void listaVaciaNoTieneElementos() {
+    void emptyList() {
         List<Ramal> resultado = SortRamal.sortRamal(List.of());
 
         assertEquals(List.of(), resultado);
     }
 
     @Test
-    public void unRamalSeMantieneIgual() {
+    void soloRamal() {
         Ramal ramal = new Ramal("Ana I 100");
 
         List<Ramal> resultado = SortRamal.sortRamal(List.of(ramal));
@@ -25,7 +25,7 @@ public class SortRamalTest {
     }
 
     @Test
-    public void ordenaLosRamalesPorDistanciaAscendente() {
+    void ascendantRamalOrder() {
         Ramal ramalLejano = new Ramal("Pedro D 300");
         Ramal ramalCercano = new Ramal("Ana I 100");
         Ramal ramalIntermedio = new Ramal("Luis I 200");
@@ -37,7 +37,7 @@ public class SortRamalTest {
     }
 
     @Test
-    public void priorizaLaDireccionICuandoHayEmpateDeDistancia() {
+    void directionOrder() {
         Ramal primero = new Ramal("Ana I 100");
         Ramal segundo = new Ramal("Maria D 100");
 
